@@ -1,5 +1,6 @@
 import React from 'react'
 import { Task } from '../Types'
+import HiddenMessage from './HiddenMessage'
 
 // TaskListから受け取ったpropsに型を定義
 type Props = {
@@ -26,6 +27,7 @@ const TaskItem = ({ task, handleDone, handleDelete }: Props) => {
       >
         削除
       </button>
+      <HiddenMessage children={task.done} />
     </li>
   )
 }
